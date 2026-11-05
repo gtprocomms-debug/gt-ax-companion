@@ -1448,7 +1448,7 @@ const HERO_PHOTO="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgc
 document.getElementById("heroPhoto").style.backgroundImage=`url(${HERO_PHOTO})`;
 try{
   if(window.qrcode){
-    const q=qrcode(0,"M");q.addData(location.href.split("#")[0]||"https://claude.ai");q.make();
+    const q=qrcode(0,"M");q.addData("https://axcompanion.com");q.make();
     const n=q.getModuleCount();let d="";
     for(let r=0;r<n;r++)for(let c=0;c<n;c++)if(q.isDark(r,c))d+=`M${c} ${r}h1v1h-1z`;
     document.getElementById("qr").insertAdjacentHTML("afterbegin",`<svg viewBox="-1 -1 ${n+2} ${n+2}" shape-rendering="crispEdges" aria-label="QR code for this app"><rect x="-1" y="-1" width="${n+2}" height="${n+2}" fill="#FAFAF7"/><path d="${d}" fill="#111111"/></svg>`);
