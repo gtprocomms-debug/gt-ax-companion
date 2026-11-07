@@ -1209,58 +1209,75 @@ const featured=riders.slice().sort((a,b)=>(a.n??9999)-(b.n??9999));
 // Each row: [overall, number, name, hometown, heat position, heat #, semi/LCQ, moto 1, moto 2]
 // overall = null for riders who didn't make the main. "-" = didn't race it, "DNF" = did not finish.
 const ROUND={
-  label:"Round 14", event:"GTAmX Round 14 · Pro", venue:"Topeka, KS", date:"Feb 14, 2026", cls:"Open Pro", entries:28,
+  label:"Round 1", event:"GT AX Round 1 · Pro", venue:"Claremore, OK", date:"Nov 6, 2026", cls:"Open Pro", entries:30,
   rows:[
-    [1,91,"Iziah Clark","Fort Dodge, IA",4,2,"-",1,1],
-    [2,800,"Mike Alessi","Hilliard, FL",2,1,"-",4,2],
-    [3,1,"Cheyenne Harmon","Fort Worth, TX",1,1,"-",2,5],
-    [4,983,"Cain Larson","Ashland, WI",3,1,"-",5,4],
-    [5,824,"Carter Stephenson","Groveland, FL",2,2,"-",3,6],
-    [6,996,"Preston Taylor","Hastings, NE",1,2,"-",10,3],
-    [7,188,"Eddie Norred","Rockford, IL",4,1,"-",6,7],
-    [8,49,"Elijah Tetzlaff","Oconomowoc, WI",5,1,"-",7,8],
-    [9,368,"Brock Stiener","Crown Point, IN",7,1,3,8,11],
-    [10,31,"Caden Meyer","Aurora, NE",6,2,"-",12,9],
-    [11,8,"Tucker Nelson","Garnett, KS",6,1,"-",13,10],
-    [12,66,"Wyatt Reimer","Claremore, OK",3,2,"-",9,16],
-    [13,822,"Riley Ripper","Magnolia, TX",7,2,2,14,12],
-    [14,9,"Brandon Espe-Tiegs","Glenville, MN",5,2,"-",11,15],
-    [15,777,"Brendan Sipple","Austin, TX",8,2,1,15,13],
-    [16,37,"Luke St John","Weldon Spring, MO",9,2,4,16,14],
-    [null,306,"Damon Strobel","Elizabeth, CO",8,1,5],
-    [null,63,"Ryan Hadley","Colorado Springs, CO",9,1,7],
-    [null,36,"Gavin Tilford","Pine Island, MN",10,1,6],
-    [null,265,"Konner Barta","McPherson, KS",10,2,9],
-    [null,829,"Jacob Kurre","Tonganoxie, KS",11,1,11],
-    [null,75,"Jalen McManis","Topeka, KS",11,2,10],
-    [null,58,"Brandon Herschell","Lyndon, KS",12,1,13],
-    [null,966,"Koltyn Thompson","Bennington, KS",12,2,12],
-    [null,419,"John Berry","Tonganoxie, KS",13,1,8],
-    [null,10,"Ace Enloe","St. Clair, MO","DNF",1,"DNF"],
-    [null,2,"Ben Nelko","Aliquippa, PA","DNF",1,"DNF"],
-    [null,615,"Bayler McKellar","Luther, OK","DNF",2,"DNF"]
+    [1,3,"Cain Larson","Ashland, WI",4,1,"-",1,1],
+    [2,800,"Mike Alessi","Hilliard, FL",1,2,"-",2,2],
+    [3,146,"Hayes Edwards","Montgomery, TX",2,2,"-",3,4],
+    [4,55,"Dandre Roos","Muscatine, IA",3,2,"-",5,3],
+    [5,11,"Colby Lessar","Tecumseh, OK",2,3,"-",7,6],
+    [6,188,"Eddie Norred","Rockford, IL",4,2,"-",11,5],
+    [7,33,"Sawyer Treadwell","Tecumseh, OK",3,3,"-",6,11],
+    [8,873,"Ronnie Orres","Fort Dodge, IA",3,1,"-",10,8],
+    [9,700,"Brady Collins","Wichita, KS",5,1,1,9,9],
+    [10,49,"Elijah Tetzlaff","Oconomowoc, WI",4,3,"-",8,10],
+    [11,151,"Carter Gordon","Louisville, IL",1,1,"-",4,16],
+    [12,246,"Branden Walther","Denton, TX",2,1,"-",13,12],
+    [13,79,"Ryan Boutilier","Pueblo, CO",8,2,2,12,14],
+    [14,14,"Kane Bollasina","St. Louis, MO",1,3,"-","DNF",7],
+    [15,822,"Riley Ripper","Magnolia, TX",7,2,1,15,13],
+    [16,693,"Bryce McLaud","Cedar Rapids, IA",6,1,2,14,15],
+    [null,63,"Ryan Hadley","Colorado Springs, CO",5,2,3],
+    [null,424,"Grant Hepp","Fort Dodge, IA",5,3,8],
+    [null,299,"Cayden Leidigh","Marion, IA",6,2,3],
+    [null,901,"Lance Banks","Belton, MO",6,3,4],
+    [null,32,"Codee Samples","Maypearl, TX",7,1,4],
+    [null,95,"Gavin Wayland","Wetumka, OK",7,3,6],
+    [null,812,"Luke Dickey","Caldwell, TX",8,1,9],
+    [null,276,"Trenton Harned","Winterset, IA",8,3,8],
+    [null,738,"Troy Anderson","Tyler, TX",9,1,5],
+    [null,959,"Axel Neff","Slippery Rock, PA",9,2,7],
+    [null,157,"Jake Mason","Justin, TX",9,3,7],
+    [null,16,"Deagan Driskell","Sidney, IA",10,1,6],
+    [null,608,"Ryan Mouton","Abbeville, LA",10,2,9],
+    [null,267,"Myles Ilstrup","Elk River, MN",10,3,5]
   ]
 };
 // Series points are written by hand: they include B-main points and Head 2 Head bonus points.
 // Each row: [name, points]. Order and ties are worked out automatically.
 const SERIES={
-  title:"2025–26 Pro Points", note:"Final · post drop", updated:"Feb 14, 2026", rounds:"14 of 14",
+  title:"2026–27 Pro Points", note:"After Round 1", updated:"Nov 7, 2026", rounds:"1 of 14", final:false,
   rows:[
-    ["Iziah Clark",314],["Cheyenne Harmon",282],["Cain Larson",275],["Carter Stephenson",241],["Preston Taylor",237],
-    ["Mike Alessi",227],["Ben Nelko",227],["Wyatt Reimer",212],["Caden Braswell",169],["Tucker Nelson",168],
-    ["Carter Gordon",158],["Eddie Norred",157],["Michael Hicks",149],["Brendan Sipple",139],["John Berry",112],
-    ["Caden Meyer",109],["Riley Ripper",95],["Brock Steiner",94],["Dandre Roos",92],["Elijah Tetzlaff",92],
-    ["Brandon Espe-Tiegs",89],["Max Shane",81],["Damon Strobel",79],["Gavin Tilford",76],["Brodie Oconnor",75],
-    ["Ace Enloe",69],["Branden Walther",59],["Jalen Mcmanis",58],["Logan Riggins",56],["Ronnis Orres",53],
-    ["Bayler McKellar",53],["Konner Barta",52],["Luke St. John",43],["Ryan Hadley",41],["Owen Covell",37],
-    ["Josh Carson",33],["Jacob Kurre",32],["Myles Ilstrup",29],["Jake Preston",23],["Bronson McClure",21],
-    ["Whispern Smith Jr",19],["Matt Forsythe",19],["Koltyn Thompson",18],["Bryce McLaud",16],["Gavin Wayland",16],
-    ["Mason Kerr",16],["Brady Collins",15],["Chase Chyma",15],["Austin Hanabarger",14],["Thomas Ralston",13],
-    ["Evan Stice",12],["Cayden Leidigh",11],["Brandon Herschell",11],["Troy Anderson",10],["Jace Wells",9],
-    ["Zac Maley",9],["Zachery Johnson",8],["Jake Bork",7],["Jhandu Kyler",6],["Ryan Mouton",6],
-    ["Thor Kahler",5],["Luke Lockhart",4],["Carson Johanningmeier",4],["Clay Edwards",3],["Drake Orr",3],
-    ["Collin Hinrichs",2],["Zane Klemz",2],["Cameron Harrison",1],["Cade Miller",1],["Dawson Kaub",1],
-    ["Alex Smolik",1],["John Short",0],["Kyler Hawkey",0]
+    ["Cain Larson",25],
+    ["Mike Alessi",25],
+    ["Hayes Edwards",23],
+    ["Dandre Roos",22],
+    ["Colby Lessar",21],
+    ["Eddie Norred",20],
+    ["Sawyer Treadwell",19],
+    ["Ronnie Orres",18],
+    ["Brady Collins",17],
+    ["Elijah Tetzlaff",16],
+    ["Carter Gordon",15],
+    ["Branden Walther",14],
+    ["Ryan Boutilier",13],
+    ["Kane Bollasina",12],
+    ["Riley Ripper",11],
+    ["Bryce McLaud",10],
+    ["Ryan Hadley",5],
+    ["Grant Hepp",5],
+    ["Cayden Leidigh",5],
+    ["Lance Banks",5],
+    ["Codee Samples",5],
+    ["Gavin Wayland",5],
+    ["Luke Dickey",5],
+    ["Trenton Harned",5],
+    ["Troy Anderson",5],
+    ["Axel Neff",5],
+    ["Jake Mason",5],
+    ["Deagan Driskell",5],
+    ["Ryan Mouton",5],
+    ["Myles Ilstrup",5]
   ]
 };
 
@@ -1554,7 +1571,7 @@ function renderRound(){
     return `<${tag} class="tr"${bio?` data-bio="${riders.indexOf(bio)}"`:""} style="grid-template-columns:40px 46px 1fr 76px"><span class="pos" style="font-size:12px">–</span><span class="mini">${r[1]}</span><span class="nm"><b>${esc(r[2])}${bio?'<span class="bio">BIO →</span>':""}</b><small>${miniFlag(r[3])}${esc(r[3].toUpperCase())}</small></span><span class="mt" style="font-family:var(--f-mono);font-size:10px;text-align:center;line-height:1.35">H${r[5]} ${ord(r[4])}<br>SEMI ${ord(r[6])}</span></${tag}>`;
   };
   resPane.innerHTML=`
-  <div class="res-note"><span class="tag b">LAST SEASON · FINAL ROUND</span><span class="mono" style="font-size:12px">${R.entries} ENTRIES</span></div>
+  <div class="res-note"><span class="tag b">${esc(R.label.toUpperCase())} · FINAL</span><span class="mono" style="font-size:12px">${R.entries} ENTRIES</span></div>
   <div class="round-meta"><div><span>EVENT</span><b>${esc(R.label)} · ${esc(R.cls)}</b></div><div><span>VENUE</span><b>${esc(R.venue)}</b></div><div><span>DATE</span><b>${esc(R.date)}</b></div><div><span>FORMAT</span><b>Heats · Semi · 2 Mains</b></div></div>
   <div class="subhead">OVERALL<span>M1 + M2 SCORED · LOWEST WINS · M2 BREAKS TIES</span></div>
   <div class="table"><div class="tr head"><span class="pos">POS</span><span class="mini">NO.</span><span class="nm">RIDER · HEAT</span><span class="mt">M1</span><span class="mt">M2</span></div>${main.map(row).join("")}</div>
@@ -1569,11 +1586,11 @@ function renderSeries(){
   const shown=showAllPts?ranked:ranked.slice(0,20);
   const row=r=>{
     const bio=bioFor(null,r[1]),tag=bio?"button":"div",tie=ranked.filter(x=>x[0]===r[0]).length>1;
-    return `<${tag} class="tr pts-row"${bio?` data-bio="${riders.indexOf(bio)}"`:""}><span class="pos${r[0]<=3?" p"+r[0]:""}">${tie?"T"+r[0]:r[0]}</span><span class="nm"><b>${esc(r[1])}${bio?'<span class="bio">BIO →</span>':""}</b></span><span class="pts"><span class="bar"><i style="width:${Math.round(r[2]/lead*100)}%"></i></span><b>${r[2]}</b></span><span class="gapc">${r[3]===null?"—":"−"+r[3]}</span></${tag}>`;
+    return `<${tag} class="tr pts-row"${bio?` data-bio="${riders.indexOf(bio)}"`:""}><span class="pos${r[0]<=3?" p"+r[0]:""}">${tie?"T"+r[0]:r[0]}</span><span class="nm"><b>${esc(r[1])}${bio?'<span class="bio">BIO →</span>':""}</b></span><span class="pts"><span class="bar"><i style="width:${Math.round(r[2]/lead*100)}%"></i></span><b>${r[2]}</b></span><span class="gapc">${!r[3]?"—":"−"+r[3]}</span></${tag}>`;
   };
   resPane.innerHTML=`
   <div class="res-note"><span class="tag b">${esc(S.note.toUpperCase())}</span><span class="mono" style="font-size:12px">UPDATED ${esc(S.updated.toUpperCase())}</span></div>
-  <div class="round-meta"><div><span>SERIES</span><b>${esc(S.title)}</b></div><div><span>ROUNDS</span><b>${esc(S.rounds)}</b></div><div><span>CHAMPION</span><b>${esc(ranked[0][1])}</b></div><div><span>RIDERS SCORED</span><b>${ranked.length}</b></div></div>
+  <div class="round-meta"><div><span>SERIES</span><b>${esc(S.title)}</b></div><div><span>ROUNDS</span><b>${esc(S.rounds)}</b></div><div><span>${S.final?"CHAMPION":"POINTS LEADER"}</span><b>${esc(ranked.filter(x=>x[0]===1).map(x=>x[1]).join(" & "))}</b></div><div><span>RIDERS SCORED</span><b>${ranked.length}</b></div></div>
   <div class="subhead">STANDINGS<span>INCLUDES B-MAIN + HEAD 2 HEAD POINTS</span></div>
   <div class="table"><div class="tr head pts-row"><span class="pos">POS</span><span class="nm">RIDER</span><span class="pts" style="justify-content:center">PTS</span><span class="gapc">GAP</span></div>${shown.map(row).join("")}</div>
   ${ranked.length>20?`<button class="btn more" id="morePts">${showAllPts?"Show top 20":"Show all "+ranked.length+" riders"}</button>`:""}`;
