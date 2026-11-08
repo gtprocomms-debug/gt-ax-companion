@@ -1231,75 +1231,75 @@ const featured=riders.slice().sort((a,b)=>(a.n??9999)-(b.n??9999));
 // Each row: [overall, number, name, hometown, heat position, heat #, semi/LCQ, moto 1, moto 2]
 // overall = null for riders who didn't make the main. "-" = didn't race it, "DNF" = did not finish.
 const ROUND={
-  label:"Round 1", event:"GT AX Round 1 · Pro", venue:"Claremore, OK", date:"Nov 6, 2026", cls:"Open Pro", entries:30,
+  label:"Round 2", event:"GT AX Round 2 · Pro", venue:"Claremore, OK", date:"Nov 7, 2026", cls:"Open Pro", entries:30,
   rows:[
-    [1,3,"Cain Larson","Ashland, WI",4,1,"-",1,1],
-    [2,800,"Mike Alessi","Hilliard, FL",1,2,"-",2,2],
-    [3,146,"Hayes Edwards","Montgomery, TX",2,2,"-",3,4],
-    [4,55,"Dandre Roos","Muscatine, IA",3,2,"-",5,3],
-    [5,11,"Colby Lessar","Tecumseh, OK",2,3,"-",7,6],
-    [6,188,"Eddie Norred","Rockford, IL",4,2,"-",11,5],
-    [7,33,"Sawyer Treadwell","Tecumseh, OK",3,3,"-",6,11],
-    [8,873,"Ronnie Orres","Fort Dodge, IA",3,1,"-",10,8],
-    [9,700,"Brady Collins","Wichita, KS",5,1,1,9,9],
-    [10,49,"Elijah Tetzlaff","Oconomowoc, WI",4,3,"-",8,10],
-    [11,151,"Carter Gordon","Louisville, IL",1,1,"-",4,16],
-    [12,246,"Branden Walther","Denton, TX",2,1,"-",13,12],
-    [13,79,"Ryan Boutilier","Pueblo, CO",8,2,2,12,14],
-    [14,14,"Kane Bollasina","St. Louis, MO",1,3,"-","DNF",7],
-    [15,822,"Riley Ripper","Magnolia, TX",7,2,1,15,13],
-    [16,693,"Bryce McLaud","Cedar Rapids, IA",6,1,2,14,15],
-    [null,63,"Ryan Hadley","Colorado Springs, CO",5,2,3],
-    [null,424,"Grant Hepp","Fort Dodge, IA",5,3,8],
-    [null,299,"Cayden Leidigh","Marion, IA",6,2,3],
-    [null,901,"Lance Banks","Belton, MO",6,3,4],
-    [null,32,"Codee Samples","Maypearl, TX",7,1,4],
-    [null,95,"Gavin Wayland","Wetumka, OK",7,3,6],
-    [null,812,"Luke Dickey","Caldwell, TX",8,1,9],
-    [null,276,"Trenton Harned","Winterset, IA",8,3,8],
-    [null,738,"Troy Anderson","Tyler, TX",9,1,5],
-    [null,959,"Axel Neff","Slippery Rock, PA",9,2,7],
-    [null,157,"Jake Mason","Justin, TX",9,3,7],
-    [null,16,"Deagan Driskell","Sidney, IA",10,1,6],
-    [null,608,"Ryan Mouton","Abbeville, LA",10,2,9],
-    [null,267,"Myles Ilstrup","Elk River, MN",10,3,5]
+    [1,3,"Cain Larson","Ashland, WI",1,2,"-",2,1],
+    [2,14,"Kane Bollasina","St. Louis, MO",2,2,"-",1,2],
+    [3,800,"Mike Alessi","Hilliard, FL",1,1,"-",3,3],
+    [4,146,"Hayes Edwards","Montgomery, TX",1,3,"-",6,4],
+    [5,188,"Eddie Norred","Rockford, IL",4,1,"-",5,5],
+    [6,151,"Carter Gordon","Louisville, IL",2,3,"-",10,6],
+    [7,55,"Dandre Roos","Muscatine, IA",3,2,"-",9,7],
+    [8,33,"Sawyer Treadwell","Tecumseh, OK",4,2,"-",8,10],
+    [9,873,"Ronnie Orres","Fort Dodge, IA",3,3,"-",7,11],
+    [10,11,"Colby Lessar","Tecumseh, OK",2,1,"-",4,14],
+    [11,267,"Myles Ilstrup","Elk River, MN",4,3,"-",12,9],
+    [12,700,"Brady Collins","Wichita, KS",3,1,"-",14,8],
+    [13,49,"Elijah Tetzlaff","Oconomowoc, WI",6,3,1,11,13],
+    [14,79,"Ryan Boutilier","Pueblo, CO",6,1,1,13,12],
+    [15,246,"Branden Walther","Denton, TX",5,1,2,15,15],
+    [16,63,"Ryan Hadley","Colorado Springs, CO",7,3,2,16,"DNF"],
+    [null,822,"Riley Ripper","Magnolia, TX","-","-","-",1],
+    [null,32,"Codee Samples","Maypearl, TX","-","-","-",2],
+    [null,299,"Cayden Leidigh","Marion, IA","-","-","-",3],
+    [null,901,"Lance Banks","Belton, MO","-","-","-",4],
+    [null,16,"Deagan Driskell","Sidney, IA","-","-","-",5],
+    [null,276,"Trenton Harned","Winterset, IA","-","-","-",6],
+    [null,608,"Ryan Mouton","Abbeville, LA","-","-","-",7],
+    [null,738,"Troy Anderson","Tyler, TX","-","-","-",8],
+    [null,693,"Bryce McLaud","Cedar Rapids, IA","-","-","-","-"],
+    [null,424,"Grant Hepp","Fort Dodge, IA","-","-","-","-"],
+    [null,812,"Luke Dickey","Caldwell, TX","-","-","-","-"],
+    [null,959,"Axel Neff","Slippery Rock, PA","-","-","-","-"],
+    [null,157,"Jake Mason","Justin, TX","-","-","-","-"],
+    [null,95,"Gavin Wayland","Wetumka, OK","-","-","-","-"]
   ]
 };
 // Series points are written by hand: they include B-main points and Head 2 Head bonus points.
 // Each row: [name, points]. Order and ties are worked out automatically.
 const SERIES={
-  title:"2026–27 Pro Points", note:"After Round 1", updated:"Nov 7, 2026", rounds:"1 of 14", final:false,
+  title:"2026–27 Pro Points", note:"After Round 2", updated:"Nov 8, 2026", rounds:"2 of 14", final:false,
   rows:[
-    ["Cain Larson",25],
-    ["Mike Alessi",25],
-    ["Hayes Edwards",23],
-    ["Dandre Roos",22],
-    ["Colby Lessar",21],
-    ["Eddie Norred",20],
-    ["Sawyer Treadwell",19],
-    ["Ronnie Orres",18],
-    ["Brady Collins",17],
-    ["Elijah Tetzlaff",16],
-    ["Carter Gordon",15],
-    ["Branden Walther",14],
-    ["Ryan Boutilier",13],
-    ["Kane Bollasina",12],
-    ["Riley Ripper",11],
-    ["Bryce McLaud",10],
-    ["Codee Samples",9],
-    ["Grant Hepp",8],
-    ["Luke Dickey",7],
-    ["Axel Neff",6],
-    ["Deagan Driskell",5],
-    ["Trenton Harned",4],
-    ["Jake Mason",3],
-    ["Myles Ilstrup",2],
-    ["Ryan Mouton",1],
-    ["Ryan Hadley",1],
-    ["Troy Anderson",1],
-    ["Lance Banks",1],
-    ["Gavin Wayland",1],
-    ["Cayden Leidigh",1]
+    ["Cain Larson",50],
+    ["Mike Alessi",49],
+    ["Hayes Edwards",45],
+    ["Dandre Roos",41],
+    ["Eddie Norred",41],
+    ["Colby Lessar",37],
+    ["Sawyer Treadwell",37],
+    ["Kane Bollasina",36],
+    ["Ronnie Orres",35],
+    ["Carter Gordon",35],
+    ["Brady Collins",31],
+    ["Elijah Tetzlaff",29],
+    ["Branden Walther",25],
+    ["Ryan Boutilier",25],
+    ["Riley Ripper",20],
+    ["Myles Ilstrup",17],
+    ["Codee Samples",17],
+    ["Bryce McLaud",11],
+    ["Ryan Hadley",11],
+    ["Deagan Driskell",10],
+    ["Grant Hepp",9],
+    ["Cayden Leidigh",8],
+    ["Luke Dickey",8],
+    ["Trenton Harned",8],
+    ["Lance Banks",7],
+    ["Axel Neff",7],
+    ["Jake Mason",4],
+    ["Ryan Mouton",4],
+    ["Troy Anderson",3],
+    ["Gavin Wayland",2]
   ]
 };
 
@@ -1590,7 +1590,7 @@ function renderRound(){
   };
   const orow=r=>{
     const bio=bioFor(r[1],r[2]),tag=bio?"button":"div";
-    return `<${tag} class="tr"${bio?` data-bio="${riders.indexOf(bio)}"`:""} style="grid-template-columns:40px 46px 1fr 76px"><span class="pos" style="font-size:12px">–</span><span class="mini">${r[1]}</span><span class="nm"><b>${esc(r[2])}${bio?'<span class="bio">BIO →</span>':""}</b><small>${miniFlag(r[3])}${esc(r[3].toUpperCase())}</small></span><span class="mt" style="font-family:var(--f-mono);font-size:10px;text-align:center;line-height:1.35">H${r[5]} ${ord(r[4])}<br>SEMI ${ord(r[6])}</span></${tag}>`;
+    return `<${tag} class="tr"${bio?` data-bio="${riders.indexOf(bio)}"`:""} style="grid-template-columns:40px 46px 1fr 76px"><span class="pos" style="font-size:12px">–</span><span class="mini">${r[1]}</span><span class="nm"><b>${esc(r[2])}${bio?'<span class="bio">BIO →</span>':""}</b><small>${miniFlag(r[3])}${esc(r[3].toUpperCase())}</small></span><span class="mt" style="font-family:var(--f-mono);font-size:10px;text-align:center;line-height:1.35">${r[4]!=="-"?`H${r[5]} ${ord(r[4])}<br>SEMI ${ord(r[6])}`:`B MAIN<br>${r[7]!=null&&r[7]!=="-"?ord(r[7]):"9TH+"}`}</span></${tag}>`;
   };
   resPane.innerHTML=`
   <div class="res-note"><span class="tag b">${esc(R.label.toUpperCase())} · FINAL</span><span class="mono" style="font-size:12px">${R.entries} ENTRIES</span></div>
@@ -1599,7 +1599,7 @@ function renderRound(){
   <div class="table"><div class="tr head"><span class="pos">POS</span><span class="mini">NO.</span><span class="nm">RIDER · HEAT</span><span class="mt">M1</span><span class="mt">M2</span></div>${main.map(row).join("")}</div>
   <div class="legend-row"><span><i></i>MOTO WIN</span><span>H2 4TH = HEAT 2, 4TH PLACE</span></div>
   <div class="subhead">DIDN'T MAKE THE MAIN<span>${out.length} RIDERS</span></div>
-  <div class="table"><div class="tr head" style="grid-template-columns:40px 46px 1fr 76px"><span class="pos"></span><span class="mini">NO.</span><span class="nm">RIDER</span><span class="mt">HEAT · SEMI</span></div>${out.map(orow).join("")}</div>`;
+  <div class="table"><div class="tr head" style="grid-template-columns:40px 46px 1fr 76px"><span class="pos"></span><span class="mini">NO.</span><span class="nm">RIDER</span><span class="mt">${out[0]&&out[0][4]==="-"?"B MAIN":"HEAT · SEMI"}</span></div>${out.map(orow).join("")}</div>`;
 }
 function renderSeries(){
   const S=SERIES,rows=S.rows.slice().sort((a,b)=>b[1]-a[1]);
